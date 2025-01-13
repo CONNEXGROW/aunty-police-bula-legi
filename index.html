@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aspire 400K - Fueling the Next Generation</title>
+    <style>
+        /* Add this new CSS for the banner */
+        .banner {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: block;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3);
+            margin-bottom: 2rem;
+        }
+
+        /* Rest of your existing CSS remains the same */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+        :root {
+            --primary-color: #00ffff;
+            --secondary-color: #ff00ff;
+            --accent-color: #ffff00;
+            --background-color: #000000;
+            --text-color: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .glitch-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .glitch {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+            color: var(--primary-color);
+            letter-spacing: 0.1em;
+            animation: glitch 2s infinite;
+        }
+
+        @keyframes glitch {
+            0% {
+                text-shadow: 0.05em 0 0 var(--secondary-color), -0.05em -0.025em 0 var(--accent-color),
+                    -0.025em 0.05em 0 var(--primary-color);
+            }
+            14% {
+                text-shadow: 0.05em 0 0 var(--secondary-color), -0.05em -0.025em 0 var(--accent-color),
+                    -0.025em 0.05em 0 var(--primary-color);
+            }
+            15% {
+                text-shadow: -0.05em -0.025em 0 var(--secondary-color), 0.025em 0.025em 0 var(--accent-color),
+                    -0.05em -0.05em 0 var(--primary-color);
+            }
+            49% {
+                text-shadow: -0.05em -0.025em 0 var(--secondary-color), 0.025em 0.025em 0 var(--accent-color),
+                    -0.05em -0.05em 0 var(--primary-color);
+            }
+            50% {
+                text-shadow: 0.025em 0.05em 0 var(--secondary-color), 0.05em 0 0 var(--accent-color),
+                    0 -0.05em 0 var(--primary-color);
+            }
+            99% {
+                text-shadow: 0.025em 0.05em 0 var(--secondary-color), 0.05em 0 0 var(--accent-color),
+                    0 -0.05em 0 var(--primary-color);
+            }
+            100% {
+                text-shadow: -0.025em 0 0 var(--secondary-color), -0.025em -0.025em 0 var(--accent-color),
+                    -0.025em -0.05em 0 var(--primary-color);
+            }
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            margin-top: 1rem;
+        }
+
+        .prize-amount {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin-top: 1rem;
+            text-shadow: 2px 2px 4px rgba(255, 0, 255, 0.5);
+        }
+
+        .countdown {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .countdown-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            min-width: 80px;
+            backdrop-filter: blur(10px);
+            border: 2px solid var(--primary-color);
+            box-shadow: 0 0 10px var(--primary-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .countdown-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 255, 255, 0.5);
+        }
+
+        .countdown-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .countdown-label {
+            font-size: 0.8rem;
+            color: var(--text-color);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--accent-color);
+            color: var(--background-color);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            margin-top: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 255, 0, 0.3);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .benefits-section, .timeline-section {
+            border: 2px solid var(--primary-color);
+            padding: 1rem;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .benefits-section:hover, .timeline-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 255, 255, 0.5);
+        }
+
+        .connexgrow-header, .timeline-header {
+            border-bottom: 2px solid var(--primary-color);
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            color: var(--accent-color);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .benefit-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 0.8rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 255, 255, 0.5);
+        }
+
+        .timeline-item {
+            margin-bottom: 0.8rem;
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        .partners-section {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .partners-title {
+            border: 2px solid var(--primary-color);
+            padding: 0.5rem;
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--accent-color);
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .partners-title:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 255, 255, 0.5);
+        }
+
+        .partners-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .partner-circle {
+            width: 60px;
+            height: 60px;
+            border: 2px solid var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-size: 0.8rem;
+        }
+
+        .partner-circle:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 255, 255, 0.5);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem;
+            border-top: 1px solid var(--primary-color);
+        }
+
+        .footer-info {
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .footer-info a:hover {
+            text-decoration: underline;
+        }
+
+        .rights {
+            font-size: 0.8rem;
+            color: var(--text-color);
+        }
+
+        #titleNumber, #prizeAmount {
+            transition: color 0.3s ease;
+        }
+
+        @media (min-width: 768px) {
+            .glitch {
+                font-size: 4rem;
+            }
+
+            .prize-amount {
+                font-size: 3rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 2fr 1fr;
+            }
+
+            .countdown-item {
+                min-width: 100px;
+            }
+
+            .countdown-number {
+                font-size: 2.5rem;
+            }
+
+            .countdown-label {
+                font-size: 1rem;
+            }
+
+            .partner-circle {
+                width: 80px;
+                height: 80px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Add the banner image here -->
+        <img src="WhatsApp Image 2025-01-13 at 7.05.08 PM.jpeg" alt="Aspire 400K Banner" class="banner">
+
+        <header>
+            <div class="glitch-wrapper">
+                <h1 class="glitch" data-text="ASPIRE">ASPIRE <span id="titleNumber">0</span><span>K</span></h1>
+            </div>
+            <p class="subtitle">Fueling the Next Generation of Entrepreneurs</p>
+            <div class="prize-amount">₹<span id="prizeAmount">0</span> Grand Prize!</div>
+        </header>
+
+        <section class="countdown">
+            <h2>Event Starts In:</h2>
+            <div class="countdown-timer" id="countdown">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">00</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">00</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">00</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            </div>
+        </section>
+
+        <a href="#" class="cta-button" id="registerButton">Register Now</a>
+
+        <div class="content-grid">
+            <div class="benefits-section">
+                <div class="connexgrow-header">
+                    <span>CONNEXGROW PRESENTS</span>
+                </div>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div>INR 4 Lac Grand Prize</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div>INR 10 LAC Crore in Perks</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div>Mentoring & Incubation Support</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div>Networking Opportunities</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div>Learning Interaction with Mentors</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div>Corporate Association Opportunity</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div>Funding Readiness for selected startups</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-section">
+                <div class="timeline-header">TIMELINE</div>
+                <div class="timeline-item">
+                    <p class="timeline-date">1 MAR</p>
+                    <p>APPLICATION START</p>
+                </div>
+                <div class="timeline-item">
+                    <p class="timeline-date">15 MAR</p>
+                    <p>APPLICATION DEADLINE</p>
+                </div>
+                <div class="timeline-item">
+                    <p class="timeline-date">1 APR</p>
+                    <p>SHORTLIST ANNOUNCEMENT</p>
+                </div>
+                <div class="timeline-item">
+                    <p class="timeline-date">15 APR</p>
+                    <p>GRAND FINALE</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="partners-section">
+            <div class="partners-title">IN ASSOCIATION WITH</div>
+            <div class="partners-grid">
+                <div class="partner-circle">Partner 1</div>
+                <div class="partner-circle">Partner 2</div>
+                <div class="partner-circle">Partner 3</div>
+                <div class="partner-circle">Partner 4</div>
+                <div class="partner-circle">Partner 5</div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-info">
+                <p>Powered by ConnexGrow</p>
+                <p>Visit us at: <a href="http://www.connexgrow.com" target="_blank">www.connexgrow.com</a></p>
+            </div>
+            <div class="rights">
+                All rights reserved by NULYF GLOBAL © 2025
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const registerButton = document.getElementById('registerButton');
+            
+            registerButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('Registration opening soon! Get ready for the chance to win ₹4,00,000!');
+            });
+
+            // Countdown Timer (dynamic display)
+            const countDownDate = new Date("Mar 1, 2025 00:00:00").getTime();
+
+            const updateCountdown = () => {
+                const now = new Date().getTime();
+                const distance = countDownDate - now;
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+                document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+                document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+                document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+
+                if (distance < 0) {
+                    clearInterval(countdownInterval);
+                    document.getElementById("countdown").innerHTML = "EXPIRED";
+                }
+            };
+
+            // Update the countdown every second
+            const countdownInterval = setInterval(updateCountdown, 1000);
+
+            // Initial call to display the countdown immediately
+            updateCountdown();
+
+            // Animation for 400K in title
+            const titleNumber = document.getElementById('titleNumber');
+            const prizeAmount = document.getElementById('prizeAmount');
+
+            function animateValue(obj, start, end, duration, isThousand = false) {
+                let startTimestamp = null;
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    let value = Math.floor(easeOutQuart(progress) * (end - start) + start);
+                    obj.innerHTML = isThousand ? value.toLocaleString() : value;
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    }
+                };
+                window.requestAnimationFrame(step);
+            }
+
+            // Add easing function for smoother animation
+            function easeOutQuart(x) {
+                return 1 - Math.pow(1 - x, 4);
+            }
+
+            // Animate title number
+            animateValue(titleNumber, 0, 400, 8000);
+
+            // Animate prize amount
+            animateValue(prizeAmount, 0, 400000, 8000, true);
+        });
+    </script>
+</body>
+</html>
